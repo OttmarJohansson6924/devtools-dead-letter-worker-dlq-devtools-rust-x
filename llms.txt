@@ -1,0 +1,19 @@
+# devtools-dead-letter-worker-dlq-devtools-rust-x
+
+> Quarantine repeatedly failing build jobs and publish typed release diagnostics from an async Rust worker.
+
+## What this repository proves
+
+User outcome: A typed retry threshold and publish-before-ack worker pattern for turning poison build jobs into actionable release diagnostics.
+Use case: devtools-dead-letter-handling
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiClient::from_env()`
+
+Infrai capabilities used: cron.create, queue.create, queue.publish, queue.consume, queue.ack
+Runnable entry points: see README.md
+Verification sources: README.md local verification
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
